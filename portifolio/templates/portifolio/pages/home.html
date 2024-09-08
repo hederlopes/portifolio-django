@@ -1,0 +1,34 @@
+{% extends "global/base.html" %}
+
+{% block 'title' %}Home | {% endblock 'title' %}
+
+{% block 'content'  %}
+<style>
+  h1 {
+    padding-top: 15rem;
+  }
+  .p-bemvindo {
+    text-align: justify;
+  }
+  .main-footer {
+    align-content: center;
+  }
+  h1 {
+    padding-top: 15rem;
+  }
+  .footer-links {
+   text-decoration: none;
+  }
+</style>
+  <div class="container text-center">
+    <h1 class="text-dark">Welcome!</h1>
+
+    <p class="p-bemvindo">Bem-vindo ao meu primeiro projeto desenvolvido com Python e Django! Esta é uma jornada que 
+      começou com a curiosidade de explorar o mundo da programação e a paixão por criar soluções inovadoras. 
+      Com este site, busco compartilhar meus conhecimentos e oferecer uma experiência única aos visitantes.
+    </p>
+    <p class="">
+      <a href="#" class="btn btn-lg btn-dark">Ver mais...</a>
+    </p>
+  </div>
+  {% endblock 'content'  %}

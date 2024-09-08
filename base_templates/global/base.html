@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    {% include 'portifolio/partials/head.html' %}
+    <title>{% block 'title' %}{% endblock 'title' %} Portifólio</title>
+</head>
+
+
+
+
+
+<body>
+    {% include 'portifolio/partials/header.html' %}
+  
+
+    <main>
+       
+        {% block 'content' %}{% endblock 'content' %} 
+
+                   
+    </main>
+        {% include 'portifolio/partials/footer.html' %}
+</body>       
+</html>

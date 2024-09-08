@@ -1,0 +1,50 @@
+<!-- Navbar -->
+{% include 'portifolio/partials/header.html' %}
+
+<style>
+  .container {
+    position: relative;
+  
+  }
+  {% comment %} .formulario {
+    display: grid; 
+    place-items: center;
+    padding: 0;
+   
+   
+
+  }  {% endcomment %}
+  .form {
+    margin: 2rem;
+  }
+
+</style>
+
+<div class="container">
+  <h1 class="mb-5 text-center">Entre em Contato</h1>
+  <div class="formulario">
+    <form class="">
+      <div class="form-floating mb-3 g-col-6" >
+        <input type="text" class="form-control" id="floatingInput" placeholder="FirstName LastName">
+        <label for="floatingInput">Name</label>
+      </div>
+      <div class="form-floating  mb-3">
+        <input type="password" class="form-control is-invalid" id="floatingPassword" placeholder="name@example.com">
+        <label for="floatingPEmail">Email address</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Comments</label>
+      </div>
+
+      <div class="mb-3 col-6 justify-content-end">
+      <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<!-- Footer -->
+{% include 'portifolio/partials/footer.html' %}
