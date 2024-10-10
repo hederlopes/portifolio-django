@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
 
+def administration(request):
+    return render(request, 'portifolio/pages/admin.html', context={
+        'name': 'Heder Lopes'
+    })
+
+
 def home(request):
     return render(request, 'portifolio/pages/home.html', context={
         'name': 'Heder Lopes'

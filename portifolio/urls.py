@@ -1,11 +1,14 @@
 from django.urls import path
-from portifolio.views import home, features, contact, about, resume
+from . import views
+
+app_name = 'portifolio'
 
 
 urlpatterns = [
-    path('', home),
-    path('features/', features),
-    path('contact/', contact),
-    path('about/', about),
-    path('resume/', resume),
+    path('', views.home, name="home"),
+    path('administration/', views.administration, name="administration"),
+    path('features/', views.features, name="features"),
+    path('contact/', views.contact, name="contact"),
+    path('about/', views.about, name="about"),
+    path('resume/', views.resume, name="resume"),
 ]
