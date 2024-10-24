@@ -1,336 +1,430 @@
-
-{% comment %} {% include 'portifolio/partials/header.html' %}  {% endcomment %}
-
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Resume - Start Bootstrap Theme</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version) -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Alguns icones -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
 
-    <!-- Core theme CSS (includes Bootstrap) -->
-    <link rel="stylesheet" href="{% static 'portifolio/css/resume_styles.css' %}" />
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
 
-  </head>
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <div class="link-home">
-        <a class="" href="/">HOME</a>
-      </div>
+  <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Heder Lopes</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'portifolio/img/profile.jpg' %}" alt="..." /></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#courses">Courses</a>
-          </li>
+
+  <script src="https://kit.fontawesome.com/41666bcf37.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  
+  
+  <link rel="stylesheet" href="{% static 'portifolio/css/resume.css' %}"/>
+
+
+</head>
+
+<body class="page">
+
+  <input type="checkbox" id="dark-mode-input" />
+  <label class="dark-mode-toggler" for="dark-mode-input">
+    <div></div>
+  </label>
+
+  <input id="close-sidebar" class="close-sidebar" type="checkbox" aria-label="Close sidebar" role="button">
+  <label class="close-sidebar-label" for="close-sidebar" title="close sidebar"></label>
+
+  <aside class="sidebar sidebar-bg">
+    <div class="sidebar-content">
+      <h1 onclick="getElementById('close-sidebar').checked = false;">
+        <a href="#about"><img class="img-profile" src="{% static 'portifolio/img/profile.jpg' %}"
+            alt="foto do perfil"></a>
+      </h1>
+      <nav>
+        <ul onclick="getElementById('close-sidebar').checked = false;{% load static %}
+          <li><a href="#interests">Interesses</a></li>
+          <li><a href="#badges">Badges</a></li>
         </ul>
+      </nav>
+      <div>
+        <div class="footer">
+          @Heder Lopes · 2024
+        </div>
+  </aside>
+
+  <section class="section" id="about">
+    <div class="content-about">
+      <h1>
+        Heder
+        <span class="text-primary"> Lopes</span>
+      </h1>
+      <div class="subheading">CURITIBA · PARANÁ · CEP 81270-290 · <img class="flag"
+          src="{% static 'portifolio/img/brasil.svg' %}" /><!--   +55 (42) 98427-8438 -->
+        <!--  <a href="mailto:name@email.com">sistemas.heder@gmail.com</a>-->
       </div>
-    </nav>
-    <!-- Page Content -->
-    <div class="container-fluid p-0">
-      <!-- About -->
-      <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <h1 class="mb-0">
-            Heder
-            <span class="text-primary">Lopes</span>
-          </h1>
-          <div class="subheading mb-5">
-            356 Herval D'Oeste · Curitiba, PR 81270-290 · (42) 98427-8438 ·
-            <a href="mailto:name@email.com" class="text-primary">sistemas.heder@gmail.com</a>
-          </div>
-          <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-          <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/hederlopes/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a class="social-icon" href="https://github.com/hederlopes" target="_blank"><i class="fab fa-github"></i></a>
-            <a class="social-icon" href="https://www.instagram.com/heder_lopes" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="social-icon" href="https://www.facebook.com/heder.lopes.3" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Experience -->
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Experience</h2>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Analista de Suporte</h3>
-              <div class="subheading mb-3">Infocomm TI</div>
-              <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">May 2024 - Present</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Analista de Sistemas</h3>
-              <div class="subheading mb-3">Codesign</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">March 2023 - February 2024</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Cabo · Seção de TI</h3>
-              <div class="subheading mb-3">Exército Brasileiro</div>
-              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">March 2016 - February 2023</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Programador Trainne</h3>
-              <div class="subheading mb-3">G&P Projetos e Sistemas</div>
-              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">January 2014 - February 2015</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Education -->
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Education</h2>
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Universidade Cesumar</h3>
-              <div class="subheading mb-3">Pós-Graduação</div>
-              <div>Pós-Graduação - Banco de Dados</div>
-              <p>GPA: 3.23</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">January 2020 - Apr 2022</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">FGP - Faculdade Gennagi & Peartree</h3>
-              <div class="subheading mb-3">Bacharelado em Sistemas de Informação</div>
-              <p>GPA: 3.56</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">January 2011 - Dec 2014</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Skills -->
-      <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Skills</h2>
-          <div class="subheading mb-3">Programming Languages & Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fa-brands fa-windows"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fa-brands fa-ubuntu"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="ti ti-brand-vscode"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-python"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="ti ti-brand-django"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-bootstrap"></i>
-            </li>
-            {% comment %} <li class="list-inline-item">
-              <i class="fab fa-angular"></i>
-            </li> {% endcomment %}
+      <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
+        proposition.</p>
+      <ul class="icon-media">
+        <li class="list-icon-media tooltip">
+          <a href="#" target="_blank">
+            <i class='bx bxl-facebook facebook'></i>
+          </a>
+          <span class="tooltiptext">https://facebook.com</span>
+        </li>
+        <li class="list-icon-media tooltip">
+          <a href="#" target="_blank">
+            <i class='bx bxl-instagram instagram radius-instagram'></i>
+          </a>
+          <span class="tooltiptext">https://instagram.com</span>
+        </li>
+        <li class="list-icon-media tooltip">
+          <a href="https://www.linkedin.com/in/hederlopes/" target="_blank">
+            <i class='bx bxl-linkedin linkedin'></i>
+          </a>
+          <span class="tooltiptext">https://linkedin.com</span>
+        </li>
+        <li class="list-icon-media tooltip">
+          <a href="https://github.com/hederlopes" target="_blank">
+            <i class='bx bxl-github github'></i>
+          </a>
+          <span class="tooltiptext">https://github.com</span>
+        </li>
+        </li>
+        <li class="list-icon-media tooltip">
+          <a href="https://wa.me/5542984278438/?text=Perguntas sobre a Página..." target="_blank">
+            <i class='bx bxl-whatsapp whatsapp'></i>
+          </a>
+          <span class="tooltiptext">+55 (42) 98427-8438</span>
+        </li>
+        <li class="list-icon-media tooltip">
+          <a href="mailto:sistemas.heder@gmail.comr?subject=Perguntas sobre a Página">
+            <i class='bx bxl-gmail gmail'></i>
+          </a>
+          <span class="tooltiptext">sistemas.heder@gmail.com</span>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-            <li class="list-inline-item">
-              <i class="fab fa-react"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-node-js"></i>
-            </li>
-            {% comment %} <li class="list-inline-item">
-              <i class="fab fa-sass"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-less"></i>
-            </li> {% endcomment %}
+  <section class="section" id="education">
+    <div class="content-grid-education">
+      <h2 class="mb-5">Formação Acadêmica</h2>
+      <div class="grid">
+        <article>
+          <div class="resume-content">
+            <h3 class="mb-0">Universidade Cesumar</h3>
+            <div class="subheading">Pós Graduação em Banco de Dados</div>
+            <div class="subheading">
+              <a href="{% static 'portifolio/media/bd.pdf' %}" target="_blank">Learning by joing</a>
+            </div>
+            <p>GPA: 3.23</p>
+          </div>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">August 2006 - May 2010</span>
+          </div>
+        </article>
+        <article>
+          <div class="resume-content">
+            <h3 class="mb-0">FGP - Faculdade Gennari & Peartree</h3>
+            <div class="subheading">Bacharel em Sistemas de Informação</div>
+            <div class="subhelding">
+              <a href="{% static 'portifolio/media/rec.pdf' %}" target="_blank">Trabalho de Conclusão de Curso</a>
+            </div>
+            <p>GPA: 3.56</p>
+          </div>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">August 2002 - May 2006</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            <li class="list-inline-item">
-              <i class="fa-brands fa-docker"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fa fa-database"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="ti ti-brand-mysql"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="ti ti-sql"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-git"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-github"></i>
-            </li>
-          </ul>
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Mobile-First, Responsive Design
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Cross Browser Testing & Debugging
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Cross Functional Teams
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Agile Development & Scrum
-            </li>
-          </ul>
+  <section class="section" id="experience">
+    <div class="content-about">
+      <h2 class="mb-5">Expeciência</h2>
+      <div class="grid">
+        <article>
+          <div class="resume-content">
+            <h3 class="text-secondary">Service Desk</h3>
+            <div class="subheading">Infocomm TI</div>
+            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
+              going forward,
+              a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud
+              solution. User generated content
+              in real-time will have multiple touchpoints for offshoring.</p>
+          </div>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">Maio 2024 - Presente</span>
+          </div>
+        </article>
+        <article>
+          <div class="resume-content">
+            <h3 class="mb-0">Analista de Sistemas</h3>
+            <div class="subheading">Codesign Software House</div>
+            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
+              Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion
+              along the information highway will close the loop on focusing solely on the bottom line.</p>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">Março 2023 - Fevereiro 2024</span>
+          </div>
+        </article>
+        <article>
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Militar</h3>
+            <div class="subheading">Exército Brasileiro</div>
+            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless
+              key performance indicators offline to maximise the long tail. Keeping your eye on thesecondary ball while
+              performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">Março 2016 - Fevereiro 2023</span>
+          </div>
+        </article>
+        <article>
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Programador Trainee</h3>
+            <div class="subheading">G&P Projetos e Sistemas</div>
+            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
+              users after installed base benefits. Dramatically visualize customer directed convergence without
+              revolutionary ROI.</p>
+        </article>
+        <article>
+          <div class="resume-date">
+            <span class="text-secondary">Janeiro 2014 - Fevereiro 2015</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="content-about">
+      <h2 class="">Skills</h2>
+      <div class="text-secondary subheading">Programming Languages &amp; Tools</div>
+      <ul class="icon-skill">
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-html5-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-css3-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-javascript-plain colored "></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-jquery-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-sass-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-python-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-less-plain-wordmark colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-bootstrap-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-php-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-codeigniter-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-windows11-original colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-ubuntu-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-docker-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-django-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-vscode-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-linux-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-git-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-mysql-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <i class="devicon-jira-plain colored"></i>
+        </li>
+        <li class="list-icon-skill icon-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="41" heigth="41">
+            <path fill="#ffc107" class="shadow"
+              d="M40 41H8c-2.206 0-4-1.794-4-4V11c0-2.206 1.794-4 4-4h32c2.206 0 4 1.794 4 4v26c0 2.206-1.794 4-4 4z" />
+            <path fill="#212121"
+              d="M34 12.98H14.02c-2.2 0-4 1.79-4 4V30c0 1.86 1.27 3.42 2.98 3.86v-2.14c-.59-.35-.98-.99-.98-1.72V16.98c0-1.1.9-2 2-2H34c1.1 0 2 .9 2 2V30c0 .74-.4 1.38-1 1.73v2.14c1.73-.44 3-2.01 3-3.87V16.98c0-2.21-1.79-4-4-4z" />
+            <path fill="#212121"
+              d="M16.5 28a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-3 0v-5a1.5 1.5 0 0 1 1.5-1.5zM21.5 22a1.5 1.5 0 0 1 1.5 1.5v11a1.5 1.5 0 0 1-3 0v-11a1.5 1.5 0 0 1 1.5-1.5zM26.5 25a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-3 0v-8a1.5 1.5 0 0 1 1.5-1.5zM31.5 18a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-3 0v-15a1.5 1.5 0 0 1 1.5-1.5z" />
+          </svg>
+        </li>
+      </ul>
+      <div class="text-secondary subheading">Workflow</div>
+      <ul class="fa-ul">
+        <li>
+          <i class="fa-li fa fa-check check-workflow"></i>
+          Responsive Design
+        </li>
+        <li>
+          <i class="fa-li fa fa-check check-workflow" aria-hidden="true"></i>
+          Cross Functional Teams
+        </li>
+        <li>
+          <i class="fa-li fa fa-check check-workflow"></i>
+          Agile Development &amp; Scrum
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="awards">
+    <div class="content-about">
+      <h2 class="mb-5">Cursos e Certificações</h2>
+      <ul class="list-courses">
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Artificial Intelligence Fundamentals - Cisco
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Data Analystics Essentials - Cisco
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Microsoft Power BI Para Bussiness Intelligence e Data Science - DSA
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Fundamentos de Linguagem Python para Análise de Dados, DSA
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Introdução a Ciência de Dados - DSA
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Bibliotecas Python - Unicesumar
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Impacto de Ti nos Negócios - FGV
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Fundamentos de Gestão de TI - FGV
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Introduction to Cybersecurity - Cisco
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Cybersecurity Essentials - Cisco
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Administração de Sistemas Linux: Serviços para Internet - Exército Brasileiro
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Arquitetura e Protocolo de redes TCP/IP - Exército Brasileiro
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Servidor DNS com BIND - Exército Brasileiro
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Linux: Administrador de Sistemas - Exército Brasileiro
+        </li>
+        <li>
+          <i class="fa-solid fa-trophy check-trophy"></i>
+          Modelagem de Dados - Fundação Bradesco
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="interests">
+    <div class="content-about">
+      <h2 class="mb-5">Interests</h2>
+      <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier
+        and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and
+        kayaking.</p>
+      <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I
+        am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in
+        the front-end web development world.</p>
+    </div>
+  </section>
+
+  <section class="section" id="badges">
+    <div class="content-about">
+      <h2 class="mb-5">Badges</h2>
+      <div class="grid-gallery">
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/introduction-to-cybersecurity.png' %}" alt="random imagem">
         </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Interests -->
-      <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/data-analytics-essentials.png' %}" alt="random imagem">
         </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Awards -->
-      <section class="resume-section" id="awards">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Awards & Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              Google Analytics Certified Developer
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              Mobile Web Specialist - Google Certification
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              1
-              <sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              1
-              <sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              2
-              <sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              1
-              <sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-              3
-              <sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005
-            </li>
-          </ul>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/introduction-to-data-science.png' %}" alt="random imagem">
         </div>
-      </section>
-      <!-- Courses -->
-      <section class="resume-section" id="courses">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Courses</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fa-solid fa-chalkboard-user text-warning"></i></span>
-              Data Analytics Essentials
-            </li>
-            <li>
-              <span class="fa-li"><i class="fa-solid fa-chalkboard-user text-warning"></i></span>
-             
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009
-            </li>
-            <li>
-              <span class="fa-li"><i class="fa-solid fa-chalkboard-user text-warning"></i></span>
-              Artificial Intelligence Fundamentals
-            </li>
-          </ul>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/artificial-intelligence-fundamentals.png' %}" alt="random imagem">
         </div>
-      </section>
-    </div>       
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS -->
-    {% comment %} <script src="js/scripts.js"></script> {% endcomment %}
-  </body>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/python-essentials-1.1.png' %}" alt="random imagem">
+        </div>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/ai-fundamentals-with-ibm-skillsbuild.png' %}" alt="random imagem">
+        </div>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/networking-academy-learn-a-thon-2020-r.png' %}" alt="random imagem">
+        </div>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/mcsa-web-applications-certified-2016.png' %}" alt="random imagem">
+        </div>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/exam-480-programming-in-html5-with-javascript-and-css3.png' %}"
+            alt="random imagem">
+        </div>
+        <div class="gallery-badges">
+          <img src="{% static 'portifolio/media/exam-486-developing-asp-net-mvc-web-applications.png' %}"
+            alt="random imagem">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="back-to-top" href="#about">↑</a>
+</body>
 </html>
+
