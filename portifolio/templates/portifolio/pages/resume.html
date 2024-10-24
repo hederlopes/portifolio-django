@@ -1,7 +1,7 @@
 {% load static %}
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
-</body>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +22,8 @@
 
 
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  
-  
-  <link rel="stylesheet" href="{% static 'portifolio/css/resume.css' %}"/>
 
-
+  <link rel="stylesheet" href="{% static 'portifolio/css/resume.css' %}">
 </head>
 
 <body class="page">
@@ -46,7 +43,12 @@
             alt="foto do perfil"></a>
       </h1>
       <nav>
-        <ul onclick="getElementById('close-sidebar').checked = false;{% load static %}
+        <ul onclick="getElementById('close-sidebar').checked = false;">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#education">Formação</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#awards">Cursos</a></li>
           <li><a href="#interests">Interesses</a></li>
           <li><a href="#badges">Badges</a></li>
         </ul>
@@ -427,4 +429,3 @@
   <a class="back-to-top" href="#about">↑</a>
 </body>
 </html>
-
