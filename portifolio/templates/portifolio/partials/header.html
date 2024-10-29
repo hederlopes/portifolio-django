@@ -1,56 +1,24 @@
 {% include 'portifolio/partials/head.html' %}
 
-<style>
-  .navbar #headNavbar {
-    color: var(--color-white);
-    text-decoration: none;
-    display: flex;
-    flex-flow: row nowrap;
-  
-    width: 100%%;
-    margin: 0 auto;
-  }
-  
-  #headNav {
-    background-color: #212529;
-    color: #ffffff;
-    font-weight: 900;
-    font-family: 'Roboto', Corbel, Avenir, 'Lucida Grande', 'Lucida Sans', sans-serif;
-  }
-  .navbar-brand {
-    color: #ffffff;
-  }
-  
-  .nav-link,
-  .navbar-text {
-    color: white;
-  }
-</style>
+<input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
 
-{% comment %} <body class="" data-bs-theme="dark">
-  {% endcomment %}
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="headNav">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Welcome</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/resume">Resume</a>
-          </li>
-        </ul>
-        <span class="navbar-text">Portifólio Django</span>
-      </div>
-    </div>
-  </nav>
-  {% comment %}
-</body> {% endcomment %}
+<aside class="menu menu-bg">
+  <div class="main-content menu-content">
+    <h1 onclick="getElementById('close-menu').checked = false;">
+      <a class="" href="/">Portifólio Django</a>
+          </h1>
+    <nav>
+      <ul onclick="getElementById('close-menu').checked = false;">
+        <li><a href="/features" class="">Features</a></li>
+        <li><a href="/contact" class="">Contact</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/resume" class="">Resume</a></li>
+      </ul>
+          </nav>
+  </div>
+</aside>
+
+
+
+

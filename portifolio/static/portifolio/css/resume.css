@@ -62,7 +62,7 @@ body {
 	font-size: 1.5rem;
 	color: var(--gray-color);
 	line-height: 1.5;
-	text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	/* text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); */
 }
 
 h1,
@@ -141,6 +141,8 @@ a {
 p {
 
 	margin-bottom: 1rem;
+    
+
 }
 
 .text-primary {
@@ -551,6 +553,7 @@ padding: 0;
 	height: 1.8rem;
 	margin: 0;
 	padding: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .check-workflow {
@@ -610,10 +613,16 @@ padding: 0;
 	z-index: 1;
 }
 
+
+
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 }
+
+
+
 
 
 /*BADGES*/
@@ -641,14 +650,12 @@ padding: 0;
 .gallery-badges:hover {
 	transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
 }
 
 .gallery-badges img {
 	max-width: 12rem;
 	max-height: auto;
-	
-}
+	}
 
 
 /*FOOTER*/
@@ -778,12 +785,13 @@ padding: 0;
 }
 
 /* Estilos para tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1367px) {
 	.grid-gallery {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		gap: var(--gap);
 		counter-reset: grid-counter;
 	}
-
-}
+	@media screen(max-width: 4rem) {
+	
+	}

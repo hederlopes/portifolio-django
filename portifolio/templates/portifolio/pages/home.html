@@ -3,32 +3,18 @@
 {% block 'title' %}Home | {% endblock 'title' %}
 
 {% block 'content'  %}
-<style>
-  h1 {
-    padding-top: 15rem;
-  }
-  .p-bemvindo {
-    text-align: justify;
-  }
-  .main-footer {
-    align-content: center;
-  }
-  h1 {
-    padding-top: 15rem;
-  }
-  .footer-links {
-   text-decoration: none;
-  }
-</style>
-  <div class="container text-center">
-    <h1 class="text-dark">Welcome!</h1>
+<section class="section">
+  <div class="main-content home-content">
+    <h2 class="title-home">Welcome!</h2>
 
-    <p class="p-bemvindo">Bem-vindo ao meu primeiro projeto desenvolvido com Python e Django! Esta é uma jornada que 
+    <p class="text-primary text-home">Bem-vindo ao meu primeiro projeto desenvolvido com Python e Django! Esta é uma jornada que 
       começou com a curiosidade de explorar o mundo da programação e a paixão por criar soluções inovadoras. 
       Com este site, busco compartilhar meus conhecimentos e oferecer uma experiência única aos visitantes.
     </p>
-    <p class="">
-      <a href="#" class="btn btn-lg btn-dark">Ver mais...</a>
-    </p>
+          <button type="submit" class="btn-vermais">Ver mais...</button>
+    
+    
   </div>
+</section>
+
   {% endblock 'content'  %}
