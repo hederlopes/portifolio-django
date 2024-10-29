@@ -83,7 +83,7 @@ h1 {
 
 h2 {
 	font-size: 5rem;
-	margin-bottom: 1rem;
+	margin: 1.5rem 0 1rem;
 	text-transform: uppercase;
 	line-height: 1.2;
 	color: var(--dark-section-color);
@@ -101,7 +101,7 @@ h3 {
 	font-weight: bold;
 	unicode-bidi: isolate;
 	text-transform: uppercase;
-	margin: 0;
+	margin: 1rem 0 1rem;
 }
 
 h4 {
@@ -126,6 +126,7 @@ a {
 
 p {
 	margin-bottom: 1rem;
+	color: var(--dark-color);
 }
 
 .text-primary {
@@ -214,36 +215,66 @@ body .full-width {
 	width: 50%;
 	left: 25%;
 }
+.close-menu {
+	display: none;
+}
 
 /* HOME */
 .home-content {
 	position: relative;
 	top: 8rem;
 	display: grid;
-	grid-template-rows: 4rem 8rem 4rem;
+	grid-template-rows: 0.4fr 1fr 0.6fr;
 	gap: var(--gap);
 	justify-content: center;
 	align-items: center;
 	text-justify: center;
+	
 }
 
 .title-home {
 	align-items: center;
 	text-align: center;
 }
+.text-home{
+	color: var(--gray-dark-color);
+	font-size: 2.25rem;
+	text-align: center;
+}
 
 .btn-vermais {
 	color: var(--pastel-color);
 	background: var(--dark-color);
-	padding: 1rem;
-	width: 20rem;
+	padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    vertical-align: middle;
 	font-size: 2rem;
-	font-weight: 900;
+	font-weight: 700;
 	border-radius: 1rem;
 	border: 0.1rem solid var(--dark-color);
+	line-height: 1.5;
+	user-select: none;
 	cursor: pointer;
 	margin: 0 auto;
 }
+
+/* ABOUT */
+.about-content {
+	display: grid;
+	grid-template-rows: 0.6fr 1fr 1fr;
+	gap: var(--gap);
+}
+
+.container p {
+	color: var(--gray-dark-color);
+	text-align: justify;
+}
+
+.container ul li {
+	text-decoration: none;
+	list-style: none;
+	color: var(--gray-dark-color);
+}
+
 
 /* FOOTER */
 footer {
@@ -279,8 +310,8 @@ footer a {
 		position: relatvar(--gap)ive;
 		top: 2rem;
 		display: grid;
-		grid-template-rows: 5rem 10rem 5rem;
-		gap: 5rem;
+		grid-template-rows: 0.2fr 1fr 0.2fr;
+		gap: var(--gap);
 		justify-content: center;
 		align-items: center;
 
@@ -289,6 +320,9 @@ footer a {
 	.title-home {
 		align-items: center;
 		text-align: center;
+	}
+	.text-home{
+		font-size: 1.8rem;
 	}
 
 	.menu {
