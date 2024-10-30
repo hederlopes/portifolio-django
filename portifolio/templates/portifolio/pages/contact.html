@@ -1,50 +1,43 @@
-<!-- Navbar -->
-{% include 'portifolio/partials/header.html' %}
+{% extends "global/base.html" %}
 
-<style>
-  .container {
-    position: relative;
-  
-  }
-  {% comment %} .formulario {
-    display: grid; 
-    place-items: center;
-    padding: 0;
-   
-   
+{% block 'title' %}Contact | {% endblock 'title' %}
 
-  }  {% endcomment %}
-  .form {
-    margin: 2rem;
-  }
 
-</style>
+{% block 'content'  %}
+<section class="section">  
+  <div class="main-content">
+    <h2 class="text-dark">Contacts</h2>
 
-<div class="container">
-  <h1 class="mb-5 text-center">Entre em Contato</h1>
-  <div class="formulario">
-    <form class="">
-      <div class="form-floating mb-3 g-col-6" >
-        <input type="text" class="form-control" id="floatingInput" placeholder="FirstName LastName">
-        <label for="floatingInput">Name</label>
-      </div>
-      <div class="form-floating  mb-3">
-        <input type="password" class="form-control is-invalid" id="floatingPassword" placeholder="name@example.com">
-        <label for="floatingPEmail">Email address</label>
-      </div>
+    <div class="intro-contact">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus odio dolores voluptate expedita suscipit qui facilis reiciendis necessitatibus dolorem eos ex provident veniam, nesciunt harum quis quod ratione cumque. Aperiam!</p>
+    </div>   
 
-      <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Comments</label>
-      </div>
-
-      <div class="mb-3 col-6 justify-content-end">
-      <button type="submit" class="btn btn-dark">Submit</button>
-      </div>
-    </form>
-  </div>
-
-</div>
-
-<!-- Footer -->
-{% include 'portifolio/partials/footer.html' %}
+    <div class="contact-form">
+      <fieldset class="form-grid">
+        <legend>Contact us</legend>
+        <form class="">
+          <div class="form-group" >
+            <label for="first-name">First Name</label>
+            <input type="text" name="ffirst-name" id="first-name" placeholder="First Name">
+                      </div>
+          <div class="form-group" >
+             <label for="last-name">Last Name</label>
+             <input type="text"  name="last-name" id="last-name" placeholder="Last Name">
+          </div>
+          <div class="form-group" >
+            <label for="email">E-Mail</label>
+            <input type="email"  name="email" id="email" placeholder="example@email.com">
+         </div>
+         <div class="form-group" >
+          <label for="message">Message</label>
+          <textarea  name="message" id="message"  cols="30" rows="5" placeholder="Your Message"></textarea>
+       </div>
+            <div class="form-group">
+          <button type="submit" class="btn-submit">Submit</button>
+          </div>
+        </form>
+      </fieldset>
+      
+    </div>
+  </section>
+  {% endblock 'content'  %}
