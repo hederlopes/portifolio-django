@@ -249,12 +249,60 @@ body .full-width {
     vertical-align: middle;
 	font-size: 2rem;
 	font-weight: 700;
-	border-radius: 1rem;
+	/* border-radius: 1rem; */
 	border: 0.1rem solid var(--dark-color);
 	line-height: 1.5;
 	user-select: none;
 	cursor: pointer;
 	margin: 0 auto;
+}
+/* CONTACT */
+
+.btn-submit {
+	color: var(--pastel-color);
+	background: var(--dark-color);
+	padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    vertical-align:middle;
+	font-size: 2rem;
+	font-weight: 700;
+	/* border-radius: 1rem; */
+	border: 0.1rem solid var(--dark-color);
+	line-height: 1.5;
+	user-select: none;
+	cursor: pointer;
+	margin: 0 auto;
+	
+}
+.form-grid{
+	padding: 3rem;
+	border: .1rem solid var(--gray-dark-color);
+}
+.form-grid legend{
+	font-style: italic;
+	font-size: 1.6rem;
+	margin-bottom: 3rem;
+	color: var(--gray-dark-color);
+}
+.form-group{
+	flex: 1 1 32rem;
+}
+.form-group label{
+	display: block;
+	margin: 1rem 0 .2rem;
+	color: var(--gray-dark-color);
+}
+.form-group input,
+.form-group textarea{
+	border: .1rem solid var(--gray-dark-color);
+	background: var(--white-color);
+	padding: 1.5rem 2rem;
+	width: 100%;
+	font-size: 2rem;
+	outline: none;
+}
+.form-group button{
+	float: right;
+
 }
 
 /* ABOUT */

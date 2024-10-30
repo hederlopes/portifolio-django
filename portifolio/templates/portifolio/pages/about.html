@@ -1,10 +1,15 @@
-<!-- Navbar -->
-{% include 'portifolio/partials/header.html' %}
+{% extends "global/base.html" %}
 
+{% block 'title' %}About | {% endblock 'title' %}
+
+
+{% block 'content'  %}
 <section class="section">
   <div class="main-content">
     <h2>About</h2>
     <div class="about-content">
+
+          <!-- Seção Sobre o Projeto -->
       <div class="container">
         <h3 class="text-dark">Sobre o Projeto</h3>
         <p class="">Este projeto foi desenvolvido utilizando o framework Django, conhecido por sua robustez e simplicidade para criar aplicações web. O objetivo do projeto era criar uma plataforma para gerenciamento de tarefas, com funcionalidades de criação, edição, e exclusão de tarefas, além de autenticação de usuários.</p>
@@ -60,8 +65,7 @@
         </ul>
       </div>
     </div>
-    <!-- Seção Sobre o Projeto -->
+    
   </div>
 </section>
-<!-- Footer -->
-{% include 'portifolio/partials/footer.html' %}
+{% endblock 'content'  %}
