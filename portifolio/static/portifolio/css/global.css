@@ -86,7 +86,7 @@ h2 {
 	margin: 1.5rem 0 1rem;
 	text-transform: uppercase;
 	line-height: 1.2;
-	color: var(--dark-section-color);
+	color: var(--dark-sidebar-color);
 }
 
 h3 {
@@ -119,7 +119,6 @@ h6 {
 
 a {
 	font-family: "Saira Extra Condensed", serif;
-	font-size: 2.5rem;
 	text-decoration: none;
 	color: var(--green-dark-color);
 }
@@ -141,7 +140,7 @@ p {
 .main-content {
 	max-width: 120rem;
 	margin: 0 auto;
-	padding: 8rem var(--gap);
+	padding: 8rem var(--gap);	
 }
 
 body .full-width {
@@ -149,13 +148,17 @@ body .full-width {
 	flex: 1 1 100%;
 }
 
-.section {
+main {
 	min-height: 100hv;
+}
+
+.section {
+	min-height: 100vh;	
 }
 
 /* MENU */
 .menu-bg {
-	background: var(--dark-color);
+	background: var(--dark-sidebar-color);
 	color: var(--pastel-color);
 }
 
@@ -215,38 +218,36 @@ body .full-width {
 	width: 50%;
 	left: 25%;
 }
+
 .close-menu {
 	display: none;
 }
 
 /* HOME */
 .home-content {
-	position: relative;
-	top: 8rem;
+	padding-top: 23rem;
 	display: grid;
 	grid-template-rows: 0.4fr 1fr 0.6fr;
 	gap: var(--gap);
-	justify-content: center;
-	align-items: center;
-	text-justify: center;
-	
 }
 
 .title-home {
-	align-items: center;
+	justify-content: center;
 	text-align: center;
 }
-.text-home{
+
+.text-home {
 	color: var(--gray-dark-color);
 	font-size: 2.25rem;
 	text-align: center;
+	vertical-align: middle;
 }
 
 .btn-vermais {
 	color: var(--pastel-color);
-	background: var(--dark-color);
+	background: var(--dark-sidebar-color);
 	padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    vertical-align: middle;
+	vertical-align: middle;
 	font-size: 2rem;
 	font-weight: 700;
 	/* border-radius: 1rem; */
@@ -256,13 +257,19 @@ body .full-width {
 	cursor: pointer;
 	margin: 0 auto;
 }
+
 /* FEATURES */
 
-.features-content{
+.features-content {
+	padding-top: 15rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: var(--gap);
 
+
+}
+.color-svg-feature{
+	fill: var(--gray-dark-color);
 }
 
 /* CONTACT */
@@ -271,7 +278,7 @@ body .full-width {
 	color: var(--pastel-color);
 	background: var(--dark-color);
 	padding: 1.5rem 2.5rem 1.5rem 2.5rem;
-    vertical-align:middle;
+	vertical-align: middle;
 	font-size: 2rem;
 	font-weight: 700;
 	/* border-radius: 1rem; */
@@ -280,28 +287,33 @@ body .full-width {
 	user-select: none;
 	cursor: pointer;
 	margin: 0 auto;
-	
+
 }
-.form-grid{
+
+.form-grid {
 	padding: 3rem;
 	border: .1rem solid var(--gray-dark-color);
 }
-.form-grid legend{
+
+.form-grid legend {
 	font-style: italic;
 	font-size: 1.6rem;
 	margin-bottom: 3rem;
 	color: var(--gray-dark-color);
 }
-.form-group{
+
+.form-group {
 	flex: 1 1 32rem;
 }
-.form-group label{
+
+.form-group label {
 	display: block;
 	margin: 1rem 0 .2rem;
 	color: var(--gray-dark-color);
 }
+
 .form-group input,
-.form-group textarea{
+.form-group textarea {
 	border: .1rem solid var(--gray-dark-color);
 	background: var(--white-color);
 	padding: 1.5rem 2rem;
@@ -309,7 +321,8 @@ body .full-width {
 	font-size: 2rem;
 	outline: none;
 }
-.form-group button{
+
+.form-group button {
 	float: right;
 
 }
@@ -334,35 +347,40 @@ body .full-width {
 
 
 /* FOOTER */
-footer {
-	text-align: center;
-	padding: 0.8rem;
+.main-footer {
+	display: grid;
+	grid-template-columns: 1fr 0.15fr 1fr;
+	gap: 1rem;
+	padding: 1rem 0 .1rem;
 	background-color: var(--green-light-color);
 	position: fixed;
 	bottom: 0%;
 	width: 100%;
-	color: var(--django-color);
-	font-weight: 400;
-	font-size: 1rem;
-
+	font-family: "Saira Extra Condensed", serif;
+	font-size: 1.7rem;
+	font-weight: 700;
 }
 
-footer .developer {
-	text-decoration: none;
+.developer p {
+	text-align: right;	
+	color: var(--dark-section-color);
 }
 
-footer a {
-	text-decoration: none;
-	color: var(--dark-sidebar-color);
+.media-footer p {
+	text-align: center;
+	color: var(--dark-section-color);
 }
 
-.footer-links span {
-	color: var(--dark-sidebar-color);
-	font-weight: 900;
+.footer-links p {
+	text-align: left;
+	color: var(--dark-section-color);
 }
+
 
 /* MEDIA QUERIES */
 @media (max-width: 40rem) {
+
+	/* HOME */
 	.home-content {
 		position: relatvar(--gap)ive;
 		top: 2rem;
@@ -371,17 +389,18 @@ footer a {
 		gap: var(--gap);
 		justify-content: center;
 		align-items: center;
-
 	}
 
 	.title-home {
 		align-items: center;
 		text-align: center;
 	}
-	.text-home{
+
+	.text-home {
 		font-size: 1.8rem;
 	}
 
+	/* MENU */
 	.menu {
 		bottom: 0;
 		text-align: center;
@@ -429,6 +448,57 @@ footer a {
 		content: 'x';
 	}
 
+	/* FEATURES */
+
+	.features-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--gap);
+
+	}
+
+	/* FOOTER */
+	.main-footer {
+		grid-template-columns: 1fr;
+		background-color: var(--green-light-color);
+		position: fixed;
+		bottom: 0%;
+		width: 100%;
+		font-weight: 400;
+	}
+
+	.developer p {
+		font-size: 1rem;
+		text-align: center;
+		margin: 0;
+	}
+
+	.developer p a {
+		font-size: 1rem;
+		text-align: center;
+
+	}
+
+	.media-footer p {
+		text-align: center;
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.media-footer p a {
+		font-size: 1rem;
+	}
+
+	.footer-links p {
+		text-align: center;
+		padding-top: 0;
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.footer-links p a {
+		font-size: 1rem;
+	}
 }
 
 @media (min-width: 601px) and (max-width: 1367px) {}
