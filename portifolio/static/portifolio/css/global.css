@@ -271,7 +271,18 @@ main {
 .color-svg-feature{
 	fill: var(--gray-dark-color);
 }
-
+.card-feature{
+	cursor: pointer;
+	padding: 1rem;
+	transition: all 300ms ease-in-out;
+}
+.card-feature:hover{
+	border: .1rem solid var(--gray-color);
+	transform: rotate(-2deg) scale(1.2) translate(-3%, 3%);
+	
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+	
 /* CONTACT */
 
 .btn-submit {
