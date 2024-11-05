@@ -20,9 +20,9 @@
   <script src="https://kit.fontawesome.com/41666bcf37.js" crossorigin="anonymous"></script>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" name="" rel="stylesheet">
 
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" name="" rel="stylesheet">
 
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
+ 
   <link rel="stylesheet" href="{% static 'portifolio/css/resume.css' %}">
 </head>
 
@@ -60,13 +60,16 @@
   <section class="section" id="about">
     <div class="content-about">
       <h1>
-        Heder
-        <span class="text-primary"> Lopes</span>
+        {{ resume.author.first_name }}
+        <span class="text-primary"> {{ resume.author.last_name }}</span>
       </h1>
-      <div class="subheading">CURITIBA · PARANÁ · CEP 81270-290 · <img class="flag"
-          src="{% static 'portifolio/img/brasil.svg' %}" /><!--   +55 (42) 98427-8438 -->
-        <!--  <a href="mailto:name@email.com">sistemas.heder@gmail.com</a>-->
+      <div class="subheading">
+        Analista de Sistemas · Django · Python · SQL 
       </div>
+      <!-- <div class="subheading">CURITIBA · PARANÁ · CEP 81270-290 · <img class="flag"
+          src="{% static 'portifolio/img/brasil.svg' %}" />  +55 (42) 98427-8438 -->
+        <!--  <a href="mailto:name@email.com">sistemas.heder@gmail.com</a>
+      </div>-->
       <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level
         overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
         proposition.</p>
