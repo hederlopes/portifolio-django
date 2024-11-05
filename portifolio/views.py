@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from utils.portifolio.factory import make_resume
 
 
 def administration(request):
-    return render(request, 'portifolio/pages/admin.html', context={
+    return render(request, 'portifolio/pages/resume_admin.html', context={
         'name': 'Heder Lopes'
     })
 
@@ -33,5 +34,5 @@ def about(request):
 
 def resume(request):
     return render(request, 'portifolio/pages/resume.html', context={
-        'name': 'Heder Lopes'
+        'resume': make_resume()
     })
