@@ -251,13 +251,17 @@ p {
 	padding: 0 0 0 30rem;
 }
 
-
-/* 
-.content-about {} */
-
-.grid {
+.grid-education {
 	display: grid;
-	grid-template-columns: 100rem 1fr;
+	grid-template-columns: 6fr 1fr;
+	gap: var(--gap);
+	counter-reset: grid-counter;
+}
+
+
+.grid-experience {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
 	gap: var(--gap);
 	counter-reset: grid-counter;
 }
@@ -627,13 +631,21 @@ p {
 }
 
 
+/* INTERESTS */
+.paragraph {
+	text-indent: 25px;
+	line-height: 1.5;
+	text-align: justify;
+	font-size: 1.5rem;
+	padding-right: 2.5rem;
 
+}
 
 
 /*BADGES*/
 .grid-gallery {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
 	gap: var(--gap);
 	counter-reset: grid-counter;
 	justify-content: center;
@@ -675,8 +687,9 @@ p {
 	li {
 		font-size: 1.5rem;
 	}
-	h1{
-		font-size: 8rem;
+
+	h1 {
+		font-size: 5rem;
 	}
 
 	h2 {
@@ -684,10 +697,16 @@ p {
 	}
 
 	h3 {
-		font-size: 3rem;
+		font-size: 3rem;		
 	}
 
-	.grid {
+	.grid-education {
+		grid-template-columns: 1fr;
+		padding-right: var(--gap);
+	}
+
+
+	.grid-experience {
 		grid-template-columns: 1fr;
 		padding-right: var(--gap);
 	}
@@ -780,10 +799,9 @@ p {
 	}
 
 	.grid-gallery {
-		display: grid;
+
 		grid-template-columns: repeat(2, 1fr);
-		gap: var(--gap);
-		counter-reset: grid-counter;
+
 
 	}
 
@@ -792,11 +810,28 @@ p {
 
 }
 
-/* Estilos para tablets */
+/* Estilos para notebooks pequenos */
 @media (min-width: 601px) and (max-width: 1367px) {
+
+	/* SIDEBAR */
+	.sidebar {
+		width: 20rem;
+
+	}
+	.img-profile{
+		width: 14rem;
+	}
+	
+	.sidebar ul a {
+		line-height: 1.2;
+		font-size: 1.5rem;
+	}
+
+	/* BADGES */
+
 	.grid-gallery {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: var(--gap);
 		counter-reset: grid-counter;
 	}
@@ -807,7 +842,54 @@ p {
 	}
 
 	.sidebar-content ul li {
-		height: 4rem;
+		height: 3rem;
+	}
+
+	/* SECTION */
+
+	.section {
+
+		padding: 0 0 0 25rem;
+	}
+
+	/* EDUCATION*/
+	.grid-education {
+		grid-template-columns: 4fr 1fr;
+
+	}
+
+	/* EXPERIENCE */
+	.grid-experience {
+
+		grid-template-columns: 2fr 1fr;
+
+	}
+
+
+
+}
+
+/* Estilos para tablets */
+@media (min-width: 40.1rem) and (max-width: 60rem) {
+
+	/* BADGES */
+	.grid-gallery {
+
+		grid-template-columns: repeat(3, 1fr);
+
+
+	}
+
+	/* EDUCATION*/
+	.grid-education {
+		grid-template-columns: 1fr 1fr;
+
+	}
+
+	.grid-experience {
+
+		grid-template-columns: 1fr 1fr;
+
 	}
 
 }

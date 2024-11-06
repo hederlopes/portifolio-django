@@ -1,7 +1,6 @@
 {% load static %}
  <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,9 +69,7 @@
           src="{% static 'portifolio/img/brasil.svg' %}" />  +55 (42) 98427-8438 -->
         <!--  <a href="mailto:name@email.com">sistemas.heder@gmail.com</a>
       </div>-->
-      <p class="mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level
-        overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
-        proposition.</p>
+      <p class="paragraph">{{ resume.description }}.</p>
       <ul class="icon-media">
         <li class="list-icon-media tooltip">
           <a href="#" target="_blank">
@@ -118,7 +115,7 @@
   <section class="section" id="education">
     <div class="content-grid-education content-about">
       <h2 class="mb-5">Formação Acadêmica</h2>
-      <div class="grid">
+      <div class="grid-education">
         <article>
           <div class="resume-content">
             <h3 class="mb-0">Universidade Cesumar</h3>
@@ -156,27 +153,23 @@
   <section class="section" id="experience">
     <div class="content-about">
       <h2 class="mb-5">Expeciência</h2>
-      <div class="grid">
+      <div class="grid-experience">
         <article>
           <div class="resume-content">
-            <h3 class="text-secondary">Service Desk</h3>
-            <div class="subheading">Infocomm TI</div>
-            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
-              going forward,
-              a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud
-              solution. User generated content
-              in real-time will have multiple touchpoints for offshoring.</p>
+            <h3 class="text-secondary">{{ resume.job }}</h3>
+            <div class="subheading">{{ resume.company }}</div>
+            <p>{{ resume.hability }}</p>
           </div>
         </article>
         <article>
           <div class="resume-date">
-            <span class="text-secondary">Maio 2024 - Presente</span>
+            <span class="text-secondary">{{ resume.date }} - Presente</span>
           </div>
         </article>
         <article>
           <div class="resume-content">
             <h3 class="mb-0">Analista de Sistemas</h3>
-            <div class="subheading">Codesign Software House</div>
+            <div class="subheading">{{ resume.company }}</div>
             <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
               Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion
               along the information highway will close the loop on focusing solely on the bottom line.</p>
@@ -381,13 +374,9 @@
 
   <section class="section" id="interests">
     <div class="content-about">
-      <h2 class="mb-5">Interests</h2>
-      <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier
-        and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and
-        kayaking.</p>
-      <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I
-        am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in
-        the front-end web development world.</p>
+      <h2>Interests</h2>
+      <p class="paragraph">{{ resume.middle_text}}</p>
+      <p class="paragraph">{{ resume.middle_text}}</p>
     </div>
   </section>
 

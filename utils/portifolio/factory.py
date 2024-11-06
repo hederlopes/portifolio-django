@@ -15,13 +15,17 @@ fake = Faker('pt_BR')
 def make_resume():
     return {
         'title': fake.sentence(nb_words=6),
-        'description': fake.sentence(nb_words=12),
+        'company': fake.sentence(nb_words=2),
+        'job':fake.sentence(nb_words=1),
+        'hability': fake.sentence(nb_words=35),
+        'description': fake.sentence(nb_words=50),
         'preparation_time': fake.random_number(digits=2, fix_len=True),
         'preparation_time_unit': 'Minutos',
         'servings': fake.random_number(digits=2, fix_len=True),
         'servings_unit': 'Porção',
-        'preparation_steps': fake.text(3000),
-        'created_at': fake.date_time(),
+        'long_text': fake.text(3000),
+        'middle_text': fake.text(500),
+        'date': fake.date_time(),
         'author': {
             'first_name': fake.first_name(),
             'last_name': fake.last_name(),
@@ -30,11 +34,11 @@ def make_resume():
             'name': fake.word()
         },
         'cover': {
-            'url': 'https://loremflickr.com/%s/%s/food,cook' % rand_ratio(),
+            'url': 'https://loremflickr.com/%s/%s/cook,internet' % rand_ratio(),
         }
     }
 
 
 if __name__ == '__main__':
     from pprint import pprint
-    pprint(make_recipe())
+    pprint(make_resume())
