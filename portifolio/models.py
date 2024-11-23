@@ -49,7 +49,7 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.descrption_contact
-    
+
 
 class Complementary_Courses(models.Model):
     course = models.CharField(max_length=100)
@@ -86,7 +86,7 @@ class Education(models.Model):
 
     def __str__(self):
         return self.academic_title
-    
+
 
 class Experience(models.Model):
     company = models.CharField(max_length=45)
@@ -101,6 +101,7 @@ class Experience(models.Model):
     personal_id = models.ForeignKey(
         Personal, on_delete=models.SET_NULL, null=True
     )
+
     def __str__(self):
         return self.company
 
@@ -113,12 +114,14 @@ class Interests(models.Model):
     personal_id = models.ForeignKey(
         Personal, on_delete=models.SET_NULL, null=True
     )
+
     def __str__(self):
         return self.description
 
+
 class Skills(models.Model):
     skill_name = models.CharField(max_length=45)
-    visible_icon = models.BooleanField(True,null=True)
+    visible_icon = models.BooleanField(True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(auto_now=True)
@@ -128,9 +131,10 @@ class Skills(models.Model):
 
     def __str__(self):
         return self.skill_name
-    
+
+
 class Workflow(models.Model):
-    workflow_name = models.CharField(max_length=250)    
+    workflow_name = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(auto_now=True)
