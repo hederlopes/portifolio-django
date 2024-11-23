@@ -1,6 +1,6 @@
 {% extends "global/base.html" %}
 
-{% block 'title' %}Contact | {% endblock 'title' %}
+{% block 'title' %}{{title}}{% endblock 'title' %}
 
 
 {% block 'content'  %}
@@ -9,7 +9,7 @@
     <h2 class="text-dark">Contacts</h2>
 
     <div class="intro-contact">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus odio dolores voluptate expedita suscipit qui facilis reiciendis necessitatibus dolorem eos ex provident veniam, nesciunt harum quis quod ratione cumque. Aperiam!</p>
+      <p>Did you like my website? I want to hear from you! If you have any suggestions for improvement, constructive criticism or simply want to share your experience, leave a comment below. Your opinion is very important to me!</p>
     </div>   
 
     <div class="contact-form">
@@ -28,6 +28,18 @@
             <label for="email">E-Mail</label>
             <input type="email"  name="email" id="email" placeholder="example@email.com">
          </div>
+         <div class="form-group" >
+          <label for="email">Categorie</label>
+                   
+          <select name="categorie" id="categorie">
+            <option class="option-title" value="">Select</option>
+            <option class="option-select" value="">option 2</option>
+            <option class="option-select" value="">option 1</option>
+            <option class="option-select" value="">option 3</option>
+            <option class="option-select" value="">option 4</option>
+            <option class="option-select" value="">option 5</option>
+          </select>
+       </div>
          <div class="form-group" >
           <label for="message">Message</label>
           <textarea  name="message" id="message"  cols="30" rows="5" placeholder="Your Message"></textarea>

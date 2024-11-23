@@ -1,15 +1,13 @@
 {% extends "global/base.html" %}
 
-{% block 'title' %}Home | {% endblock 'title' %}
+{% block 'title' %}{{ title }}{% endblock 'title' %}
 
 
 {% block 'content'  %}
 <section class="section">
   <div class="main-content home-content">
     <h2 class="title-home">Welcome!</h2>
-    <p class="text-home">Bem-vindo ao meu primeiro projeto desenvolvido com Python e Django! Esta é uma jornada que 
-      começou com a curiosidade de explorar o mundo da programação e a paixão por criar soluções inovadoras. 
-      Com este site, busco compartilhar meus conhecimentos e oferecer uma experiência única aos visitantes.
+    <p class="text-home">Welcome to my first project developed with Python and Django! This is a journey that started with the curiosity to explore the world of programming and the passion to create innovative solutions. With this website, I aim to share my knowledge and offer a unique experience to visitors.
     </p>
           <a href="/about" class="btn-vermais">About more...</a>       
   </div>
