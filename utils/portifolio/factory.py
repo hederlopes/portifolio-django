@@ -24,7 +24,7 @@ def make_resume():
         'servings': fake.random_number(digits=2, fix_len=True),
         'servings_unit': 'Porção',
         'long_text': fake.text(3000),
-        'middle_text': fake.text(500),
+        'middle_text': fake.text(1000),
         'date': fake.date_time(),
         'author': {
             'first_name': fake.first_name(),

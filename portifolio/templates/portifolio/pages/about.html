@@ -1,6 +1,6 @@
 {% extends "global/base.html" %}
 
-{% block 'title' %}About | {% endblock 'title' %}
+{% block 'title' %}{{title}}{% endblock 'title' %}
 
 
 {% block 'content'  %}
@@ -11,13 +11,15 @@
 
           <!-- Seção Sobre o Projeto -->
       <div class="container">
-        <h3 class="text-dark">Sobre o Projeto</h3>
-        <p class="">Este projeto foi desenvolvido utilizando o framework Django, conhecido por sua robustez e simplicidade para criar aplicações web. O objetivo do projeto era criar uma plataforma para gerenciamento de tarefas, com funcionalidades de criação, edição, e exclusão de tarefas, além de autenticação de usuários.</p>
+        <h3 class="text-dark">About the Project</h3>
+        <p class="">
+          This project was developed using the Django framework, known for its robustness and simplicity in creating web applications. The goal of the project was to create a platform for task management, with functionalities for creating, editing, and deleting tasks, as well as user authentication.
+        </p>
       </div>
 
       <!-- Seção Etapas de Desenvolvimento -->
       <div class="container">
-        <h3 class="text-dark">Etapas de Desenvolvimento</h3>
+        <h3 class="text-dark">Development Stages</h3>
         <ul class="list-group-flush">
           <li class="list-group-item">
             <strong>Planejamento:</strong> Definição dos requisitos e escopo do projeto.
@@ -45,7 +47,7 @@
 
       <!-- Seção Tecnologias Utilizadas -->
       <div class="container">
-        <h3 class="text-dark">Tecnologias Utilizadas</h3>
+        <h3 class="text-dark">Technologies Used</h3>
         <ul class="list-group-flush">
           <li class="list-group-item">
             <strong>Django:</strong> Framework web de alto nível para desenvolvimento rápido e limpo.

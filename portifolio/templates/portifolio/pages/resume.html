@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
+  <title>{{ title }}</title>
 
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -43,12 +43,12 @@
       <nav>
         <ul onclick="getElementById('close-sidebar').checked = false;">
           <li><a href="/">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#education">Formação</a></li>
-          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#awards">Cursos</a></li>
-          <li><a href="#interests">Interesses</a></li>
+          <li><a href="#awards">Courses</a></li>
+          <li><a href="#interests">Interests</a></li>
           <li><a href="#badges">Badges</a></li>
         </ul>
       </nav>
@@ -58,10 +58,12 @@
 
   <section class="section" id="about">
     <div class="content-about">
+      {% for r in resume  %}
       <h1>
-        {{ resume.author.first_name }}
-        <span class="text-primary"> {{ resume.author.last_name }}</span>
+        {{ r.first_name }}
+        <span class="text-primary"> {{ r.last_name }}</span>
       </h1>
+      {% endfor %}
       <div class="subheading">
         Analista de Sistemas · Django · Python · SQL 
       </div>
@@ -71,18 +73,21 @@
       </div>-->
       <p class="paragraph">{{ resume.description }}.</p>
       <ul class="icon-media">
+
         <li class="list-icon-media tooltip">
-          <a href="#" target="_blank">
+          <a href="https://www.facebook.com" target="_blank">
             <i class='bx bxl-facebook facebook'></i>
           </a>
           <span class="tooltiptext">https://facebook.com</span>
         </li>
+
         <li class="list-icon-media tooltip">
-          <a href="#" target="_blank">
-            <i class='bx bxl-instagram instagram radius-instagram'></i>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="bx bxl-instagram instagram"></i>
           </a>
           <span class="tooltiptext">https://instagram.com</span>
         </li>
+
         <li class="list-icon-media tooltip">
           <a href="https://www.linkedin.com/in/hederlopes/" target="_blank">
             <i class='bx bxl-linkedin linkedin'></i>
@@ -110,101 +115,58 @@
         </li>
       </ul>
     </div>
+    </div>
   </section>
 
   <section class="section" id="education">
     <div class="content-grid-education content-about">
-      <h2 class="mb-5">Formação Acadêmica</h2>
+      <h2 class="mb-5">Education</h2>
       <div class="grid-education">
+        {% for e in education  %}
         <article>
           <div class="resume-content">
-            <h3 class="mb-0">Universidade Cesumar</h3>
-            <div class="subheading">Pós Graduação em Banco de Dados</div>
+            <h3 class="mb-0">{{ e.university }}</h3>
+            <div class="subheading">{{ e.academic_title }} em {{ e.course }}</div>
             <div class="subheading">
-              <a href="{% static 'portifolio/media/bd.pdf' %}" target="_blank">Learning by joing</a>
+              <a href="{{ e.file.url }}" target="_blank">{{ e.final_project_theme }}</a>
             </div>
             <p>GPA: 3.23</p>
           </div>
         </article>
+
         <article>
           <div class="resume-date">
-            <span class="text-secondary">August 2006 - May 2010</span>
+            <span class="text-secondary">{{ e.initialized_at}} - {{ e.finished_at}}</span>
           </div>
         </article>
-        <article>
-          <div class="resume-content">
-            <h3 class="mb-0">Faculdade Gennari & Peartree</h3>
-            <div class="subheading">Bacharel em Sistemas de Informação</div>
-            <div class="subhelding">
-              <a href="{% static 'portifolio/media/rec.pdf' %}" target="_blank">Trabalho de Conclusão de Curso</a>
-            </div>
-            <p>GPA: 3.56</p>
-          </div>
-        </article>
-        <article>
-          <div class="resume-date">
-            <span class="text-secondary">August 2002 - May 2006</span>
-          </div>
-        </article>
+        {% endfor %}
+
       </div>
     </div>
   </section>
 
   <section class="section" id="experience">
     <div class="content-about">
-      <h2 class="mb-5">Expeciência</h2>
+      <h2 class="mb-5">Experience</h2>
+      
       <div class="grid-experience">
+        {% for ex in experience  %}
         <article>
           <div class="resume-content">
-            <h3 class="text-secondary">{{ resume.job }}</h3>
-            <div class="subheading">{{ resume.company }}</div>
-            <p>{{ resume.hability }}</p>
+            <h3 class="text-secondary">{{ ex.positions }}</h3>
+            <div class="subheading">{{ ex.company }}</div>
+            <p>{{ ex.reponsabilities }}</p>
           </div>
         </article>
         <article>
           <div class="resume-date">
-            <span class="text-secondary">{{ resume.date }} - Presente</span>
+            <span class="text-secondary">{{ ex.initialized_at }} - {% if ex.finished_at == None %}Current {% else %}{{ex.finished_at}}{% endif %}</span>
           </div>
         </article>
-        <article>
-          <div class="resume-content">
-            <h3 class="mb-0">Analista de Sistemas</h3>
-            <div class="subheading">{{ resume.company }}</div>
-            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
-              Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion
-              along the information highway will close the loop on focusing solely on the bottom line.</p>
-        </article>
-        <article>
-          <div class="resume-date">
-            <span class="text-secondary">Março 2023 - Fevereiro 2024</span>
-          </div>
-        </article>
-        <article>
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Militar</h3>
-            <div class="subheading">Exército Brasileiro</div>
-            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless
-              key performance indicators offline to maximise the long tail. Keeping your eye on thesecondary ball while
-              performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-        </article>
-        <article>
-          <div class="resume-date">
-            <span class="text-secondary">Março 2016 - Fevereiro 2023</span>
-          </div>
-        </article>
-        <article>
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Programador Trainee</h3>
-            <div class="subheading">G&P Projetos e Sistemas</div>
-            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
-              users after installed base benefits. Dramatically visualize customer directed convergence without
-              revolutionary ROI.</p>
-        </article>
-        <article>
-          <div class="resume-date">
-            <span class="text-secondary">Janeiro 2014 - Fevereiro 2015</span>
-          </div>
-        </article>
+
+
+        {% endfor %}
+      
       </div>
     </div>
   </section>
@@ -284,31 +246,30 @@
       </ul>
       <div class="text-secondary subheading">Workflow</div>
       <ul class="fa-ul">
-        <li>
-          <i class="fa-li fa fa-check check-workflow"></i>
-          Responsive Design
-        </li>
-        <li>
-          <i class="fa-li fa fa-check check-workflow"></i>
-          Versionamento de Código com Git e Github
-        </li>
-        <li>
-          <i class="fa-li fa fa-check check-workflow" aria-hidden="true"></i>
-          Cross Functional Teams
-        </li>
-        <li>
-          <i class="fa-li fa fa-check check-workflow"></i>
-          Agile Development &amp; Scrum
-        </li>
+        {% for w in workflow  %}        
+            <li>
+               <i class="fa-li fa fa-check check-workflow"></i>
+                  {{ w.workflow_name}}
+            </li>        
+         {% endfor %}  
       </ul>
     </div>
   </section>
 
   <section class="section" id="awards">
     <div class="content-about">
-      <h2 class="mb-5">Cursos e Certificações</h2>
+      <h2 class="mb-5">Courses and Certifications</h2>
       <ul class="list-courses">
-        <li>
+        {% for c in courses  %}
+          <li>
+            <i class="fa-solid fa-trophy check-trophy"></i>
+              {{ c.course }} - {{c.instituition}}
+          </li>
+        
+        {% endfor %}
+
+
+        {% comment %} <li>
           <i class="fa-solid fa-trophy check-trophy"></i>
           Artificial Intelligence Fundamentals - Cisco
         </li>
@@ -367,7 +328,7 @@
         <li>
           <i class="fa-solid fa-trophy check-trophy"></i>
           Modelagem de Dados - Fundação Bradesco
-        </li>
+        </li> {% endcomment %}
       </ul>
     </div>
   </section>
@@ -375,14 +336,15 @@
   <section class="section" id="interests">
     <div class="content-about">
       <h2>Interests</h2>
-      <p class="paragraph">{{ resume.middle_text}}</p>
-      <p class="paragraph">{{ resume.middle_text}}</p>
-    </div>
+      {% for i in interests  %}
+      <p class="paragraph">{{ i.description}}</p>
+      {% endfor %}
+         </div>
   </section>
 
   <section class="section" id="badges">
     <div class="content-about">
-      <h2 class="mb-5">Badges</h2>
+      <h2>Badges</h2>
       <div class="grid-gallery">
         <div class="gallery-badges">
           <img src="{% static 'portifolio/media/introduction-to-cybersecurity.png' %}" alt="random imagem">

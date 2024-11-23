@@ -327,6 +327,7 @@ main {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
 	border: .1rem solid var(--gray-dark-color);
 	background: var(--white-color);
@@ -334,7 +335,13 @@ main {
 	width: 100%;
 	font-size: 2rem;
 	outline: none;
+	color: var(--gray-dark-color);
 }
+.option-title{
+	color: var(--white-color);
+	background: var(--gray-dark-color);
+}
+
 
 .form-group button {
 	float: right;
