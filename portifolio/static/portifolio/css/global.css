@@ -347,6 +347,13 @@ main {
 	float: right;
 
 }
+/* POSTS */
+.intro-posts{
+	padding-top: 1rem;
+}
+.post-preview{
+padding: 1rem 0 1rem;
+}
 
 /* ABOUT */
 .about-content {

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Personal, Contact, Address, Complementary_Courses, Education, Experience, Interests, Skills, Workflow  # noqa E201
+from .models import Personal, Contact, Address, Complementary_Courses, Education, Experience, Interests, Skills, Workflow, Message  # noqa E201
 
 
 class PersonalAdmin(admin.ModelAdmin):
@@ -38,6 +38,10 @@ class WorkflowAdmin(admin.ModelAdmin):
     ...
 
 
+class MessageAdmin(admin.ModelAdmin):
+    ...
+
+
 admin.site.register(Personal, PersonalAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Address, AddressAdmin)
@@ -47,3 +51,4 @@ admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Interests, InterestsAdmin)
 admin.site.register(Skills, SkillsAdmin)
 admin.site.register(Workflow, WorkflowAdmin)
+admin.site.register(Message, MessageAdmin)

@@ -1,9 +1,8 @@
 {% extends "global/base.html" %}
 
 {% block 'title' %}{{title}}{% endblock 'title' %}
-
-
-{% block 'content'  %}
+ 
+{% block 'content' %}
 <section class="section">  
   <div class="main-content">
     <h2 class="text-dark">Contacts</h2>
@@ -20,10 +19,10 @@
             <label for="first-name">First Name</label>
             <input type="text" name="ffirst-name" id="first-name" placeholder="First Name">
                       </div>
-          <div class="form-group" >
+          {% comment %} <div class="form-group" >
              <label for="last-name">Last Name</label>
              <input type="text"  name="last-name" id="last-name" placeholder="Last Name">
-          </div>
+          </div> {% endcomment %}
           <div class="form-group" >
             <label for="email">E-Mail</label>
             <input type="email"  name="email" id="email" placeholder="example@email.com">
@@ -33,8 +32,8 @@
                    
           <select name="categorie" id="categorie">
             <option class="option-title" value="">Select</option>
-            <option class="option-select" value="">option 2</option>
-            <option class="option-select" value="">option 1</option>
+            <option class="option-select" value="">Sugestão</option>
+            <option class="option-select" value="">Perguntas</option>
             <option class="option-select" value="">option 3</option>
             <option class="option-select" value="">option 4</option>
             <option class="option-select" value="">option 5</option>

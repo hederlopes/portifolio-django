@@ -1,0 +1,32 @@
+{% extends "global/base.html" %}
+
+{% block 'title' %}{{title}}{% endblock 'title' %}
+ 
+{% block 'content' %}
+<section class="section">  
+  <div class="main-content">
+    <h2 class="text-dark">Posts</h2>
+
+    <div class="intro-posts">
+      <p>Did you like my website? I want to hear from you! If you have any suggestions for improvement, constructive criticism or simply want to share your experience, leave a comment below. Your opinion is very important to me!</p>
+    </div>   
+
+    <div class="contact-form">
+
+        <div class="post-content">                  
+          <!-- Post preview-->  
+           {% for post in blog  %}
+           
+           {% include 'portifolio/partials/message.html' %}
+           
+           {% endfor %}
+         
+
+          <!-- Pager-->
+          <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+            
+        </div>    
+      
+    </div>
+  </section>
+  {% endblock 'content'  %}

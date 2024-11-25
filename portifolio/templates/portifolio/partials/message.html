@@ -1,0 +1,16 @@
+          <!-- Post preview-->
+          
+          <div class="post-preview">
+                <a href="{% url "portifolio:post" post.id %}">
+                    <h3 class="post-title">{{ post.name }}</h3>
+                    <p class="post-subtitle">{{ post.message }}.</p>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">{{ b.email }}</a>
+                    on {{ post.created_at }} {{ post.id }}
+                </p>
+         </div>
+        <!-- Divider-->
+        <hr class="my-4">
+       
